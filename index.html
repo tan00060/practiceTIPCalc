@@ -1,63 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+document.addEventListener('DOMContentLoaded', init);
 
-    <div id="container">
-        <h1>Tip Calculator</h1>
-        <div id="calculator">
-            
-            <form>
-                <label>
-                    Total Amount: $ <input type="text" name="billAmount" id="billAmount" placeholder=" Bill Amount">
-                </label>
-                
-                <br>
-                <br>
 
-                <label>Tip %:</label>
 
-                <select id="tipPercent">
-                            <option disabled selected value="0">Tip Percent</option>
-                            <option value="0.5">5%</option>
-                            <option value="0.1">10%</option>
-                            <option value="0.15">15%</option>
-                            <option value="0.2">20%</option>
-                            <option value="0.25">25%</option>
-                </select>
 
-                <br>
-                <br>
+function init(){
 
-                <label>
-                        Number of people: <input type="text" name="people" id="people" placeholder=" # of People">
-                </label>
+    function calculateAmount(){
+        let bill = document.getElementById("billAmount").value;
+        console.log(bill);
+        let tip = document.getElementById("tipPercent").value;
+        console.log(tip);
+        let people = document.getElementById("people").value;
+        console.log(people);
 
-                <br>
-                <br>
+        if (bill === "" || tip === 0){
+            alert("Please fill in price and tip %");
+        }else{
+            console.log("values have been inputed");
+        }
 
-                <button type="button" id="tipAmount"> Tip Amount</button>
+        if  (people === "" || people <=1 ){
+            people = 1;
+            console.log("1 person");
+        }else{
+            console.log("more than 1");
+        }
 
-            </form>
-        </div>
+        let tipAmount = (bill * tip) / people;
+        document.getElementById("tip").textContent = tipAmount;
+    }
 
-        <br>
-        <br>
 
-        <div id="tipEach">
-            <sup>$</sup>
-            <span id="tip">0.00</span>
-            <small id="each">each</small>
-        </div>
+    document.getElementById("tipAmount").addEventListener("click", getAmount);
+    document.getElementById("tipAmount").addEventListener("click", calculateAmount);
 
-    </div>
+    function getAmount(){
+       console.log("This is the tip amount");
+    }
 
-    <script src="/main.js"></script>
-</body>
-</html>
+
+
+
+}
