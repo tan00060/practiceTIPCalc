@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="container">
+        <h1>Tip Calculator</h1>
+        <div id="calculator">
+            
+            <form>
+                <label>
+                    Total Amount: $ <input type="text" name="billAmount" id="billAmount" placeholder=" Bill Amount">
+                </label>
+                
+                <br>
+                <br>
+
+                <label>Tip %:</label>
+
+                <select id="tipPercent">
+                            <option disabled selected value="0">Tip Percent</option>
+                            <option value="0.5">5%</option>
+                            <option value="0.1">10%</option>
+                            <option value="0.15">15%</option>
+                            <option value="0.2">20%</option>
+                            <option value="0.25">25%</option>
+                </select>
+
+                <br>
+                <br>
+
+                <label>
+                        Number of people: <input type="text" name="people" id="people" placeholder=" # of People">
+                </label>
+
+                <br>
+                <br>
+
+                <button type="button" id="tipAmount"> Tip Amount</button>
+
+            </form>
+        </div>
+
+        <br>
+        <br>
+
+        <div id="tipEach">
+            <sup>$</sup>
+            <span id="tip">0.00</span>
+            <small id="each">each</small>
+        </div>
+
+    </div>
+
+    <script src="/main.js"></script>
+</body>
+</html>
