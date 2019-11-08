@@ -14,9 +14,9 @@ function init(){
         console.log(people);
 
         if (bill === "" || tip === 0){
-            alert("test");
+            alert("Please fill in price and tip %");
         }else{
-            console.log("test");
+            console.log("values have been inputed");
         }
 
         if  (people === "" || people <=1 ){
