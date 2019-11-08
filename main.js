@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 
 
+
 function init(){
 
     function calculateAmount(){
@@ -14,7 +15,7 @@ function init(){
         console.log(people);
 
         if (bill === "" || tip === 0){
-            alert("Please fill in price and tip %");
+            alert("Please fill in bill amount or tip %");
         }else{
             console.log("values have been inputed");
         }
@@ -30,15 +31,12 @@ function init(){
         document.getElementById("tip").textContent = tipAmount;
     }
 
-
-    document.getElementById("tipAmount").addEventListener("click", getAmount);
-    document.getElementById("tipAmount").addEventListener("click", calculateAmount);
-
     function getAmount(){
        console.log("This is the tip amount");
     }
 
 
-
+    document.getElementById("tipAmount").addEventListener("click", getAmount);
+    document.getElementById("tipAmount").addEventListener("click", calculateAmount);
 
 }
