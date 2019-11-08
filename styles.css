@@ -1,0 +1,72 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+  }
+
+
+#container{
+    width: 500px;
+    height: 500px;
+    margin: 150px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1{
+    font-size: 60px;
+}
+
+form{
+    font-size: 30px;
+}
+
+#billAmount{
+    width: 130px;
+    height: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#tipPercent{
+    width: 150px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#people{
+    width: 130px;
+    height: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#tipAmount{
+    background-color: #b8a1a1;
+    color: #000000;
+    font-size: 30px;
+    height: 60px;
+    width: 220px;
+    border-radius: 30px;
+    border: solid #000000 3px;
+    text-decoration: solid;
+}
+
+#tipAmount:active{
+    position: relative;
+    top: 1px;
+}
+
+#tipEach{
+    font-size: 40px;
+}
+
+#tipEach sup{
+    font-size: 25px;
+    top: -18px;
+}
+
+#tipEach:before{
+    font-size: 30px;
+}
